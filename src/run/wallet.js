@@ -8,7 +8,7 @@ import server from "../services/server.js";
 import userService from "../services/user.js";
 import walletService from "../services/wallet.js";
 
-const VERSION = "v1.0.0";
+const VERSION = "v1.0.2";
 // Đặt số lần thử kết nối lại tối đa khi proxy lỗi, nếu thử lại quá số lần cài đặt sẽ dừng chạy tài khoản đó và ghi lỗi vào file log
 const MAX_RETRY_PROXY = 20;
 // Đặt số lần thử đăng nhập tối đa khi đăng nhập lỗi, nếu thử lại quá số lần cài đặt sẽ dừng chạy tài khoản đó và ghi lỗi vào file log
@@ -28,7 +28,7 @@ const run = async (user, index) => {
   let countRetryLogin = 0;
   // await delayHelper.delay((user.index - 1) * DELAY_ACC);
   while (true) {
-    // Lấy lại dữ liệu từ server
+    // Lấy lại dữ liệu từ server ldc
     if (database?.ref) {
       user.database = database;
     }
@@ -92,11 +92,6 @@ const run = async (user, index) => {
   }
 };
 
-console.log(
-  colors.yellow.bold(
-    `=============  LDC  =============`
-  )
-);
 console.log("");
 console.log("");
 
