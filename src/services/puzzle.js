@@ -68,7 +68,7 @@ class PuzzleService {
       if (!task) {
         user.log.log(
           colors.yellow(
-            `Chưa có combo Puzzle của hôm nay hú LDC để có cập nhật combo nhé`
+            `Chưa có combo Puzzle của hôm nay, liên hệ @LCD để update combo`
           )
         );
         return;
@@ -82,7 +82,9 @@ class PuzzleService {
         );
         await delayHelper.delay(delay);
         await this.claimPuzzle(user, task);
-      }
+      } 
+    }else {
+      user.log.log(colors.magenta("Đã làm nhiệm vụ Daily Combo"));
     }
   }
 }

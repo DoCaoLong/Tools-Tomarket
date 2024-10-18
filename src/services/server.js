@@ -7,11 +7,11 @@ class Server {
   async getData() {
     try {
       const endpointDatabase =
-        "https://github.com/DoCaoLong/Json-Airdrops/blob/master/tomarket.json";
+        "https://raw.githubusercontent.com/DoCaoLong/Json-Airdrops/refs/heads/master/tomarket.json";
       const { data } = await axios.get(endpointDatabase);
       return data;
     } catch (error) {
-      console.log(colors.red("Lấy dữ liệu server ldc thất bại"));
+      console.log(colors.red("Lấy dữ liệu server LCD thất bại"));
       return null;
     }
   }
@@ -36,7 +36,7 @@ class Server {
           `🚀 Đã có phiên bản mới ${colors.blue(
             database.ver
           )}, tải ngay tại đây 👉 ${colors.blue(
-            "https://github.com/DoCaoLong/Tools-Tomarket/archive/refs/heads/master.zip"
+            "https://github.com/DoCaoLong/Tools-Tomarket"
           )}`
         )
       );

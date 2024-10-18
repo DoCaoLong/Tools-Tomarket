@@ -45,7 +45,7 @@ const run = async (user, index) => {
   await delayHelper.delay((user.index - 1) * DELAY_ACC);
   let countLoop = 0;
   while (true) {
-    // Lấy lại dữ liệu từ server ldc
+    // Lấy lại dữ liệu từ server LDC
     if (database?.ref) {
       user.database = database;
     }

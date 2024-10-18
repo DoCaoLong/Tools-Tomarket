@@ -28,7 +28,7 @@ const run = async (user, index) => {
   let countRetryLogin = 0;
   // await delayHelper.delay((user.index - 1) * DELAY_ACC);
   while (true) {
-    // Lấy lại dữ liệu từ server ldc
+    // Lấy lại dữ liệu từ server LCD
     if (database?.ref) {
       user.database = database;
     }
@@ -91,6 +91,12 @@ const run = async (user, index) => {
     break;
   }
 };
+
+console.log(
+  colors.yellow.bold(
+    `=============  Tool phát triển và chia sẻ miễn phí bởi LCD  =============`
+  )
+);
 
 console.log("");
 console.log("");
